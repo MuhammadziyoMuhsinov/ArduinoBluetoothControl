@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+
+  <Button
+      android:id="@+id/connect"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Connect"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/tv_from_arduino"
+      />
+
+    <TextView
+        android:id="@+id/tv_from_arduino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="message from arduino"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/connect"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edt_message"
+        />
+
+        <EditText
+      android:id="@+id/edt_message"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="write your message here"
+      app:layout_constraintTop_toBottomOf="@id/tv_from_arduino"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_send"
+      />
+        <Button
+      android:id="@+id/btn_send"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="send"
+      app:layout_constraintTop_toBottomOf="@id/edt_message"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/unconnect"
+      />
+        <Button
+      android:id="@+id/unconnect"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="disConnect"
+      app:layout_constraintTop_toBottomOf="@id/btn_send"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
